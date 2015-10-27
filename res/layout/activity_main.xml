@@ -1,27 +1,24 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle" >
 
     <fragment
-        android:id="@+id/menu_frag"
-        android:name="com.example.eventbus.MenuFragment"
-        android:layout_width="84dip"
-        android:layout_height="match_parent" />
-
-    <TextView
-        android:id="@+id/divide_1"
-        android:layout_width="1dip"
+        android:id="@+id/item_list"
+        android:name="com.example.eventbus.ItemListFragment"
+        android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/menu_frag"
-        android:background="@color/gainsboro" />
+        android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/show_frag"
-        android:name="com.example.eventbus.TextShowFragment"
-        android:layout_toRightOf="@id/divide_1"
-        android:layout_width="124dip"
-        android:layout_height="match_parent" />
+        android:id="@+id/item_detail_container"
+        android:name="com.example.eventbus.ItemDetailFragment"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
 
-</RelativeLayout>
+</LinearLayout>
